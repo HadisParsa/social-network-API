@@ -30,7 +30,13 @@ SO THAT my website can handle large amounts of unstructured data
 ```
 
 ## Link
- ![walkthrough demo.](./Assets/)
+
+Because this application won’t be deployed a walkthrough video is provided.
+
+![walkthrough demo.](./Assets/demogif.gif)
+
+[CLICK HERE FROM DEMO](https://drive.google.com/file/d/1qYml4icyoLOvFUM8JCl_BNWkA7yNJQIa/view)
+
 
 ## Mock-Up
 The following images show the web application's appearance and functionality:

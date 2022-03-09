@@ -4,13 +4,14 @@ module.exports = {
   // get all thoughts
   getThoughts(req, res) {
     Thoughts.find()
-      .then((thought) => res.json(thought))
+      .then((thoughts) => res.json(thoughts))
       .catch((err) => res.status(500).json(err));
   },
 
   // get a thought
   getThoughtsById(req, res) {
     Thoughts.findOne({ _id: req.params.thoughtId })
+      .select("-__v")
       .then((thought) =>
         !thought
           ? res.status(404).json({ message: "No thought with that ID" })
@@ -19,7 +20,7 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
 
-  // create a thought
+  // create a Thought
   createThoughts(req, res) {
     Thoughts.create(req.body)
       .then((dbThoughtData) => {
